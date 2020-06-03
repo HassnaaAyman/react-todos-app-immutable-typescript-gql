@@ -1,7 +1,11 @@
 import React from "react";
+import { TodoProps } from "../../infrastructure/interface/index.interface";
 
-const Todo = () => {
-  return <></>;
+
+const Todo:React.FC<TodoProps> = ({item}) => {
+  return <>
+       <p>{item}</p>
+       </>;
 };
 
-export default Todo;
+export default React.memo(Todo);
